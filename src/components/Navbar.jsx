@@ -5,7 +5,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  // Close menu when route changes (like nav link click)
+  // Close menu when route changes
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
