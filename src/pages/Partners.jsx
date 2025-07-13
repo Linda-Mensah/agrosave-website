@@ -1,12 +1,39 @@
 import { Link } from "react-router-dom";
 import PagesLayout from "../layouts/PagesLayout";
 
+const PLANT_IMAGE = "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=1920&q=80";
+
 const Partners = () => {
   return (
     <PagesLayout>
-      <section className="page-header partners">
-        <div className="container">
-          <h1>Partner With Us</h1>
+      <section
+        className="page-header partners"
+        style={{
+          backgroundImage: `url(${PLANT_IMAGE})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+          minHeight: '340px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        {/* Green overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background:
+              'linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(27, 94, 32, 0.8) 100%)',
+            zIndex: 1,
+          }}
+        ></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <h1 style={{ color: '#fff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Partner With Us</h1>
         </div>
       </section>
 
@@ -80,6 +107,20 @@ const Partners = () => {
               <p>
                 Join our movement to create a more equitable and sustainable
                 food system in Ghana.
+              </p>
+            </div>
+            <div className="benefit">
+              <h3>Access to premium markets</h3>
+              <p>
+                Connect with high-value markets and restaurants that pay premium
+                prices for fresh, quality produce.
+              </p>
+            </div>
+            <div className="benefit">
+              <h3>Technology transfer & training</h3>
+              <p>
+                Receive training on cold storage best practices and modern
+                agricultural techniques to maximize your returns.
               </p>
             </div>
           </div>

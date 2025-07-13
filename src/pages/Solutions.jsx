@@ -1,105 +1,113 @@
 import { Link } from "react-router-dom";
 import PagesLayout from "../layouts/PagesLayout";
+import { Snowflake, Truck, Zap, Shield, Globe, Clock, Users, Target } from "lucide-react";
+
+const PLANT_IMAGE = "https://plus.unsplash.com/premium_photo-1733266923168-89b7e70efe0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwZXJzb24lMjBoYW5kJTIwZ2FyZGVuaW5nJTIwcGxhbnR8ZW58MHx8MHx8fDA%3D";
 
 const Solutions = () => {
   return (
     <PagesLayout>
-      <section className="page-header solutions">
-        <div className="container">
-          <h1>Our Solution</h1>
+      <section
+        className="page-header solutions"
+        style={{
+          backgroundImage: `url(${PLANT_IMAGE})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+          minHeight: '340px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        {/* Green overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background:
+              'linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(27, 94, 32, 0.8) 100%)',
+            zIndex: 1,
+          }}
+        ></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <h1 style={{ color: '#fff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Our Solution</h1>
         </div>
       </section>
 
       <section className="solutions-intro">
         <div className="container">
-          <p className="intro-text">
-            At Agrosave, we offer two distinct solar-powered cold storage
-            services designed to serve both smallholder farmers and food
-            businesses. Together, these solutions reduce post-harvest losses,
-            improve incomes, and ensure the consistent availability of fresh
-            produce.
-          </p>
+          <h2>Our Solution</h2>
+          <div className="solution-features-grid">
+            <div className="solution-feature">
+              <div className="feature-icon"><Snowflake size={48} /></div>
+              <h3>Stationary Cold Storage</h3>
+              <p>Solar-powered cold storage units installed on farms to extend shelf life and reduce spoilage.</p>
+            </div>
+            <div className="solution-feature">
+              <div className="feature-icon"><Truck size={48} /></div>
+              <h3>Mobile Cold Storage</h3>
+              <p>Refrigerated transport that maintains cold chain integrity from farm to market for fresh delivery.</p>
+            </div>
+            <div className="solution-feature">
+              <div className="feature-icon"><Zap size={48} /></div>
+              <h3>Solar Power Solutions</h3>
+              <p>Renewable energy systems powering our cold storage, reducing costs and environmental impact.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="solution-details">
+      {/* Solution Features Grid */}
+      <section className="solution-features">
         <div className="container">
-          <div className="solution-card">
-            <div className="solution-icon">🧊</div>
-            <div className="solution-content">
-              <h2>
-                1. Stationary Solar-Powered Cold Storage (On-Farm Service)
-              </h2>
-              <p className="solution-description">
-                This service is designed for smallholder farmers who need
-                immediate, reliable storage after harvesting their crops.
-              </p>
-
-              <h3>How it works:</h3>
-              <p>
-                We install solar-powered cold storage units directly on farms,
-                especially in rural areas without access to electricity.
-              </p>
-
-              <h3>Benefits:</h3>
-              <ul className="benefits-list">
-                <li>
-                  Extends shelf life of perishables (e.g., tomatoes) by 2 to 10+
-                  days
-                </li>
-                <li>Reduces spoilage and food waste</li>
-                <li>
-                  Gives farmers flexibility to store and sell during favorable
-                  market conditions
-                </li>
-                <li>
-                  Helps farmers earn better prices and avoid post-harvest losses
-                </li>
-              </ul>
+          <h2>Why Choose Our Solutions?</h2>
+          <div className="solution-features-grid">
+            <div className="solution-feature">
+              <div className="feature-icon">
+                <Zap size={48} />
+              </div>
+              <h3>Solar Powered</h3>
+              <p>Renewable energy reduces costs and environmental impact while ensuring reliable operation.</p>
             </div>
-          </div>
-
-          <div className="solution-card">
-            <div className="solution-icon">🚛</div>
-            <div className="solution-content">
-              <h2>
-                2. Mobile Solar-Powered Cold Storage (Farm-to-Market Delivery
-                Service)
-              </h2>
-              <p className="solution-description">
-                This service is tailored for markets, restaurants, eateries, and
-                food vendors that require consistent access to fresh,
-                high-quality produce.
-              </p>
-
-              <h3>How it works:</h3>
-              <p>
-                We use solar-powered refrigerated vans to collect produce from
-                farms and deliver it to urban areas while maintaining cold chain
-                integrity during transport.
-              </p>
-
-              <h3>Benefits:</h3>
-              <ul className="benefits-list">
-                <li>Ensures fresh produce is delivered in perfect condition</li>
-                <li>
-                  Provides markets, restaurants and eateries with a reliable
-                  supply of local ingredients
-                </li>
-                <li>Reduces dependency on unreliable supply chains</li>
-                <li>Supports cleaner, low-emission food logistics</li>
-              </ul>
+            <div className="solution-feature">
+              <div className="feature-icon">
+                <Shield size={48} />
+              </div>
+              <h3>Quality Guaranteed</h3>
+              <p>Maintain optimal temperature and humidity levels to preserve produce quality and freshness.</p>
             </div>
-          </div>
-
-          <div className="solution-summary">
-            <p>
-              Together, these services create a closed-loop cold chain — from
-              farm to fork — that is clean, sustainable, and efficient.
-            </p>
-            <Link to="/partners" className="cta-button">
-              Partner With Us
-            </Link>
+            <div className="solution-feature">
+              <div className="feature-icon">
+                <Globe size={48} />
+              </div>
+              <h3>Market Access</h3>
+              <p>Connect farmers directly to premium markets and buyers for better pricing opportunities.</p>
+            </div>
+            <div className="solution-feature">
+              <div className="feature-icon">
+                <Clock size={48} />
+              </div>
+              <h3>24/7 Monitoring</h3>
+              <p>Real-time temperature monitoring and alerts ensure your produce stays fresh around the clock.</p>
+            </div>
+            <div className="solution-feature">
+              <div className="feature-icon">
+                <Users size={48} />
+              </div>
+              <h3>Community Focus</h3>
+              <p>Designed specifically for smallholder farmers and local agricultural communities.</p>
+            </div>
+            <div className="solution-feature">
+              <div className="feature-icon">
+                <Target size={48} />
+              </div>
+              <h3>Proven Results</h3>
+              <p>Demonstrated success in reducing post-harvest losses and increasing farmer incomes.</p>
+            </div>
           </div>
         </div>
       </section>
