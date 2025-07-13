@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
     <header className={isOpen ? "menu-open" : ""}>
       <div className="container">
         <div className="logo">
-          <Link to="/">Agrosave</Link>
+          <NavLink to="/">Agrosave</NavLink>
         </div>
 
         <div
@@ -29,34 +29,28 @@ const Header = () => {
         <nav>
           {" "}
           <ul className={isOpen ? "active" : ""}>
-            {" "}
             <li>
-              <Link
-                to="/"
-                className={location.pathname === "/" ? "active" : ""}
-              >
-                Home
-              </Link>
+              <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} end>Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About Us</Link>
+              <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About Us</NavLink>
             </li>
             <li>
-              <Link to="/solutions">Our Solution</Link>
+              <NavLink to="/solutions" className={({ isActive }) => isActive ? "active" : ""}>Our Solution</NavLink>
             </li>
             <li>
-              <Link to="/partners">Partner With Us</Link>
+              <NavLink to="/partners" className={({ isActive }) => isActive ? "active" : ""}>Partner With Us</NavLink>
             </li>
             <li>
-              <Link to="/news">News & Updates</Link>
+              <NavLink to="/news" className={({ isActive }) => isActive ? "active" : ""}>News & Updates</NavLink>
             </li>
             <li>
-              <Link to="/faq">FAQ</Link>
+              <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""}>FAQ</NavLink>
             </li>
             <li>
-              <Link to="/contact" className="cta-button">
+              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active cta-button" : "cta-button")}>
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>

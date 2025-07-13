@@ -2,6 +2,20 @@ import { useEffect } from "react";
 
 const AppEffects = () => {
   useEffect(() => {
+    // Throttle function for scroll events
+    const throttle = (func, limit) => {
+      let inThrottle;
+      return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      }
+    };
+
     // Intersection Observer for fade-in animations
     const observerOptions = {
       threshold: 0.1,
@@ -18,7 +32,6 @@ const AppEffects = () => {
     }, observerOptions);
 
     // Observe all cards and sections for fade-in
-
     const animatedElements = document.querySelectorAll(
       ".card, .feature-card, .partner-group, .stat, .value-card, .faq-item"
     );
@@ -31,7 +44,7 @@ const AppEffects = () => {
       observer.observe(el);
     });
 
-    // Hero content animation
+    // Hero content animation - simplified
     const heroContent = document.querySelector(".hero-content");
     if (heroContent) {
       heroContent.style.opacity = "0";
@@ -76,7 +89,6 @@ const AppEffects = () => {
         });
 
         // Open clicked item if it wasn't active
-
         if (!isActive) {
           item.classList.add("active");
           if (answer) answer.style.maxHeight = `${answer.scrollHeight}px`;
@@ -163,9 +175,9 @@ const AppEffects = () => {
       });
     });
 
-    // Header scroll effect
+    // Header scroll effect - throttled
     const header = document.querySelector("header");
-    const scrollHandler = () => {
+    const scrollHandler = throttle(() => {
       if (!header) return;
       if (window.scrollY > 50) {
         header.style.background = "rgba(255, 255, 255, 0.98)";
@@ -174,19 +186,9 @@ const AppEffects = () => {
         header.style.background = "rgba(255, 255, 255, 0.95)";
         header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
       }
-    };
-    window.addEventListener("scroll", scrollHandler);
+    }, 16); // ~60fps
 
-    // Parallax effect for hero section
-    const parallaxScroll = () => {
-      const scrolled = window.pageYOffset;
-      const hero = document.querySelector(".hero");
-      const pageHeader = document.querySelector(".page-header");
-      if (hero) hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-      if (pageHeader)
-        pageHeader.style.transform = `translateY(${scrolled * 0.3}px)`;
-    };
-    window.addEventListener("scroll", parallaxScroll);
+    window.addEventListener("scroll", scrollHandler);
 
     // Add loading animation
     window.addEventListener("load", () => {
@@ -197,33 +199,10 @@ const AppEffects = () => {
       }, 100);
     });
 
-    // Enhanced button hover effects
-    document.querySelectorAll(".cta-button").forEach((btn) => {
-      btn.addEventListener("mouseenter", function () {
-        this.style.transform = "translateY(-3px) scale(1.02)";
-      });
-      btn.addEventListener("mouseleave", function () {
-        this.style.transform = "translateY(0) scale(1)";
-      });
-    });
 
-    // Card hover effects
-    document
-      .querySelectorAll(
-        ".card, .feature-card, .partner-group, .stat, .value-card"
-      )
-      .forEach((card) => {
-        card.addEventListener("mouseenter", function () {
-          this.style.transform = "translateY(-8px) scale(1.02)";
-        });
-        card.addEventListener("mouseleave", function () {
-          this.style.transform = "translateY(0) scale(1)";
-        });
-      });
 
     return () => {
       window.removeEventListener("scroll", scrollHandler);
-      window.removeEventListener("scroll", parallaxScroll);
     };
   }, []);
 
