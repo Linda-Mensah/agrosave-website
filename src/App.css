@@ -815,6 +815,17 @@ section:nth-child(even) {
   cursor: pointer;
   transition: var(--transition);
   font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.category-btn svg {
+  display: block;
+  margin-bottom: 0.25rem;
+  margin-right: 0;
 }
 
 .category-btn.active,
@@ -2154,9 +2165,9 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   nav ul {
-    display: none !important;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -2170,16 +2181,181 @@ footer {
     overflow-y: auto;
   }
   nav ul.active {
-    display: flex !important;
+    display: flex;
   }
   .hamburger {
-    display: flex !important;
+    display: flex;
   }
-  .logo a {
-    font-size: clamp(1rem, 5vw, 1.3rem);
+  nav ul li {
+    margin: 0;
+    width: 100%;
   }
   nav ul li a {
-    font-size: clamp(0.85rem, 3vw, 1rem);
-    padding: 0.5rem 0.3rem;
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  nav ul li:last-child a {
+    border-bottom: none;
+    margin: 0 1rem;
+    border-radius: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    position: static !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+
+/* buttons and text */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center !important;
+}
+.cta-button {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  width: fit-content !important;
+}
+
+/* Accordion Styles */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.accordion-item {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 2rem;
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  transition: var(--transition);
+}
+
+.accordion-title.open,
+.accordion-title:focus,
+.accordion-title:hover {
+  background: rgba(46, 125, 50, 0.05);
+}
+
+.accordion-panel {
+  padding: 0 2rem 2rem 2rem;
+  color: #666;
+  line-height: 1.6;
+  background: #fff;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 2px 8px rgba(46, 125, 50, 0.04);
+  margin-top: -1px;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s;
+  max-height: 500px;
+  opacity: 1;
+}
+
+.accordion-panel:not(.open) {
+  max-height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.accordion-content {
+  font-size: 1.05rem;
+}
+
+/* Partner With Us Fade-in Card Styles */
+.partner-fade-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.partner-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.partner-type {
+  background: #f8faf8;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 16px rgba(46, 125, 50, 0.07);
+  padding: 2rem 1.5rem;
+  min-width: 260px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-bottom: 0;
+}
+
+.partner-type h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.partner-type p {
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.partner-type .cta-button {
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .partner-fade-card {
+    padding: 2rem 0.5rem;
+  }
+  .partner-values {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .partner-type {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }

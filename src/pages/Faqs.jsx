@@ -1,17 +1,10 @@
 import PagesLayout from "../layouts/PagesLayout";
 import { HelpCircle, Users, Building2, Settings, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import Accordion from "../components/Accordion";
 
 const Faqs = () => {
   const [activeCategory, setActiveCategory] = useState("general");
-  const [openItems, setOpenItems] = useState({});
-
-  const toggleItem = (itemId) => {
-    setOpenItems(prev => ({
-      ...prev,
-      [itemId]: !prev[itemId]
-    }));
-  };
 
   const faqData = {
     general: [
@@ -66,9 +59,32 @@ const Faqs = () => {
 
   return (
     <PagesLayout>
-      <section className="page-header faq clear-image">
-        <div className="container">
-          <h1>Frequently Asked Questions</h1>
+      <section className="page-header faq" style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1500&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        position: 'relative',
+        minHeight: '340px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
+        {/* Green overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background:
+              'linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(27, 94, 32, 0.8) 100%)',
+            zIndex: 1,
+          }}
+        ></div>
+        <div className="container" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+          <h1 style={{ color: '#fff', textShadow: '0 2px 4px rgba(0,0,0,0.3)', textAlign: 'center' }}>Frequently Asked Questions</h1>
         </div>
       </section>
 
@@ -114,24 +130,7 @@ const Faqs = () => {
           </div>
 
           <div className="faq-grid">
-            {faqData[activeCategory].map((item) => (
-              <div key={item.id} className="faq-card">
-                <div 
-                  className="faq-question"
-                  onClick={() => toggleItem(item.id)}
-                >
-                  <h3>{item.question}</h3>
-                  <div className="toggle-icon">
-                    {openItems[item.id] ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
-                  </div>
-                </div>
-                {openItems[item.id] && (
-                  <div className="faq-answer">
-                    <p>{item.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+            <Accordion items={faqData[activeCategory]} />
           </div>
 
           <div className="faq-cta">

@@ -1,7 +1,7 @@
 import PagesLayout from "../layouts/PagesLayout";
 import { Mail, Phone, MapPin, Send, User, MessageSquare, Building } from "lucide-react";
 
-const PLANT_IMAGE = "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=1920&q=80";
+const PLANT_IMAGE = "https://plus.unsplash.com/premium_photo-1664301410539-873936f539ae?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const Contact = () => {
   return (
