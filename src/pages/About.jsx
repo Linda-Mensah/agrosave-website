@@ -155,11 +155,7 @@ const About = () => {
                 <p>Strengthening local food systems and supporting rural communities.</p>
               </div>
             </div>
-            <div className="value-item integrity"
-              style={{
-                background: `linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('https://images.unsplash.com/photo-1626906722191-32650d012099?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGJsYWNrJTIwZmFybSUyMHdvcmtlcnMlMjBvbiUyMGZhcm18ZW58MHx8MHx8fDA%3D') center/cover no-repeat`,
-              }}
-            >
+            <div className="value-item integrity">
               <div className="value-content">
                 <div className="value-icon">
                   <Shield size={48} />
