@@ -6,7 +6,7 @@ import Solutions from "./pages/Solutions";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
 import News from "./pages/News";
-import Faqs from "./pages/FAQS";
+import Faqs from "./pages/faqs";
 import Contact from "./pages/Contact";
 
 function App() {
