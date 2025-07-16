@@ -109,11 +109,13 @@ const Partners = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              gap: "0.2rem",
+              gap: "0.6rem",
               marginBottom: "1rem",
             }}
           >
-            <Leaf size={32} color="#2e7d32" />
+            <div>
+              <Leaf size={64} color="#2e7d32" />
+            </div>
             <h2 style={{ textAlign: "center", margin: 0 }}>
               Why Partner with Agrosave?
             </h2>

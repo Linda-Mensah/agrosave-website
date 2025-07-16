@@ -1532,6 +1532,12 @@ section:nth-child(even) {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
+.card-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-icon {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
@@ -2222,10 +2228,10 @@ section:nth-child(even) {
 
 .mission-vision-grid .container > .grid-3 {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
 }
 
 @media (max-width: 900px) {

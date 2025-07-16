@@ -121,7 +121,7 @@ const Faqs = () => {
       <section className="faq-content">
         <div className="container">
           <div className="faq-intro">
-            <div className="intro-icon">
+            <div className="intro-icon card-icon-container">
               <HelpCircle size={64} />
             </div>
             <h2>Find Your Answers</h2>

@@ -67,7 +67,7 @@ const Home = () => {
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-content">
             <h1>
-              <Leaf className="inline-icon" /> Powering the Future of
+              <Leaf size={64} className="inline-icon" /> Powering the Future of
               Agriculture with Cold Storage Innovation
             </h1>
             <Link to="/contact" className="cta-button">

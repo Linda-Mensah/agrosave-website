@@ -21,19 +21,31 @@ const About = () => {
 
   const carouselItems = [
     {
-      icon: <Leaf size={64} />,
+      icon: (
+        <div className="card-icon-container">
+          <Leaf size={64} />
+        </div>
+      ),
       title: "Sustainable Agriculture",
       description:
         "Empowering farmers with green technology to preserve harvests and protect our planet. Our solar-powered solutions reduce carbon emissions while increasing productivity.",
     },
     {
-      icon: <Users size={64} />,
+      icon: (
+        <div className="card-icon-container">
+          <Users size={64} />
+        </div>
+      ),
       title: "Community Impact",
       description:
         "Supporting local farming communities and strengthening Ghana's food security. We're building partnerships that create lasting positive change across rural areas.",
     },
     {
-      icon: <Target size={64} />,
+      icon: (
+        <div className="card-icon-container">
+          <Target size={64} />
+        </div>
+      ),
       title: "Innovation Focus",
       description:
         "Leveraging solar power and smart technology to solve real agricultural challenges. Our cutting-edge cold storage systems are designed for Africa's unique needs.",
@@ -118,7 +130,7 @@ const About = () => {
         <div className="container">
           <div className="grid-3">
             <div className="mission-card">
-              <div className="card-icon">
+              <div className="card-icon-container">
                 <Target className="card-icon" size={48} />
               </div>
               <h3>Our Mission</h3>
@@ -128,8 +140,8 @@ const About = () => {
               </p>
             </div>
             <div className="vision-card">
-              <div className="card-icon">
-                <Globe size={48} />
+              <div className="card-icon-container">
+                <Globe className="card-icon" size={48} />
               </div>
               <h3>Our Vision</h3>
               <p>
@@ -138,8 +150,8 @@ const About = () => {
               </p>
             </div>
             <div className="values-card">
-              <div className="card-icon">
-                <Heart size={48} />
+              <div className="card-icon-container">
+                <Heart className="card-icon" size={48} />
               </div>
               <h3>Our Values</h3>
               <p>
@@ -158,7 +170,7 @@ const About = () => {
           <div className="values-grid">
             <div className="value-item sustainability">
               <div className="value-content">
-                <div className="value-icon">
+                <div className="value-icon card-icon-container">
                   <Leaf size={48} />
                 </div>
                 <h3>Sustainability</h3>
@@ -170,7 +182,7 @@ const About = () => {
             </div>
             <div className="value-item innovation">
               <div className="value-content">
-                <div className="value-icon">
+                <div className="value-icon card-icon-container">
                   <TrendingUp size={48} />
                 </div>
                 <h3>Innovation</h3>
@@ -181,7 +193,7 @@ const About = () => {
             </div>
             <div className="value-item community">
               <div className="value-content">
-                <div className="value-icon">
+                <div className="value-icon card-icon-container">
                   <Users size={48} />
                 </div>
                 <h3>Community</h3>
@@ -193,7 +205,7 @@ const About = () => {
             </div>
             <div className="value-item integrity">
               <div className="value-content">
-                <div className="value-icon">
+                <div className="value-icon card-icon-container">
                   <Shield size={48} />
                 </div>
                 <h3>Integrity</h3>
@@ -202,7 +214,7 @@ const About = () => {
             </div>
             <div className="value-item quality">
               <div className="value-content">
-                <div className="value-icon">
+                <div className="value-icon card-icon-container">
                   <Star size={48} />
                 </div>
                 <h3>Quality</h3>
@@ -214,7 +226,7 @@ const About = () => {
             </div>
             <div className="value-item partnership">
               <div className="value-content">
-                <div className="value-icon">
+                <div className="value-icon card-icon-container">
                   <Handshake size={48} />
                 </div>
                 <h3>Partnership</h3>
@@ -232,7 +244,7 @@ const About = () => {
       <section className="team-impact">
         <div className="container">
           <div className="impact-highlight">
-            <div className="impact-icon">
+            <div className="impact-icon card-icon-container">
               <Award size={64} />
             </div>
             <h2>Making a Difference</h2>
