@@ -1,9 +1,25 @@
 import PagesLayout from "../layouts/PagesLayout";
 import { Link } from "react-router-dom";
-import { Snowflake, Truck, Building2, Handshake, Newspaper, HelpCircle, Phone, Users, Target, Leaf, Zap, Shield, Globe, Clock } from "lucide-react";
+import {
+  Snowflake,
+  Truck,
+  Building2,
+  Handshake,
+  Newspaper,
+  HelpCircle,
+  Phone,
+  Users,
+  Target,
+  Leaf,
+  Zap,
+  Shield,
+  Globe,
+  Clock,
+} from "lucide-react";
 import { useEffect } from "react";
 
-const AGRO_IMAGE = "https://media.istockphoto.com/id/1221265610/photo/african-american-father-and-daughter-holding-small-seedling-at-community-garden-greenery.webp?a=1&b=1&s=612x612&w=0&k=20&c=O0d8Bxfu-2jqvnLs6WkKLQxbeFcMdT7273S-cs4wSGw=";
+const AGRO_IMAGE =
+  "https://media.istockphoto.com/id/1221265610/photo/african-american-father-and-daughter-holding-small-seedling-at-community-garden-greenery.webp?a=1&b=1&s=612x612&w=0&k=20&c=O0d8Bxfu-2jqvnLs6WkKLQxbeFcMdT7273S-cs4wSGw=";
 
 const Home = () => {
   // Remove heroImages array
@@ -13,7 +29,7 @@ const Home = () => {
       // setTimeout(() => { // This line is removed
       //   setCurrentHero((prev) => (prev + 1) % heroImages.length); // This line is removed
       //   setFade(true); // This line is removed
-      // }, 600); // This line is removed 
+      // }, 600); // This line is removed
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -21,38 +37,48 @@ const Home = () => {
   return (
     <PagesLayout>
       {/* Hero Section */}
-      <section className="hero hero-carousel hero-image" style={{
-        backgroundImage: `url(${AGRO_IMAGE})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        position: 'relative',
-        minHeight: '100vh',
-        marginTop: '80px',
-        display: 'flex',
-        alignItems: 'center',
-        overflow: 'hidden',
-      }}>
+      <section
+        className="hero hero-carousel hero-image"
+        style={{
+          backgroundImage: `url(${AGRO_IMAGE})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+          minHeight: "100vh",
+          marginTop: "80px",
+          display: "flex",
+          alignItems: "center",
+          overflow: "hidden",
+        }}
+      >
         {/* Green overlay */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(27, 94, 32, 0.8) 100%)',
-          zIndex: 1,
-        }}></div>
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(27, 94, 32, 0.8) 100%)",
+            zIndex: 1,
+          }}
+        ></div>
+        <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-content">
             <h1>
-              <Leaf className="inline-icon" /> Powering the Future of Agriculture with Cold Storage Innovation
+              <Leaf className="inline-icon" /> Powering the Future of
+              Agriculture with Cold Storage Innovation
             </h1>
             <Link to="/contact" className="cta-button">
               Contact Us
             </Link>
           </div>
         </div>
-        <div className="carousel-dots hero-carousel-dots" style={{ display: 'none' }}></div>
+        <div
+          className="carousel-dots hero-carousel-dots"
+          style={{ display: "none" }}
+        ></div>
       </section>
 
       {/* Features Section */}
@@ -118,8 +144,8 @@ const Home = () => {
               </div>
               <h3>Market Access</h3>
               <p>
-                Connect farmers with premium markets and buyers, ensuring
-                better prices and consistent demand for produce.
+                Connect farmers with premium markets and buyers, ensuring better
+                prices and consistent demand for produce.
               </p>
               <Link to="/solutions" className="learn-more">
                 Learn More
@@ -131,8 +157,8 @@ const Home = () => {
               </div>
               <h3>24/7 Support</h3>
               <p>
-                Round-the-clock technical support and emergency services to
-                keep your cold storage running smoothly.
+                Round-the-clock technical support and emergency services to keep
+                your cold storage running smoothly.
               </p>
               <Link to="/solutions" className="learn-more">
                 Learn More
@@ -253,7 +279,7 @@ const Home = () => {
               <h3>Partner With Us</h3>
               <p>Join our network of farmers and businesses</p>
             </Link>
-            <Link to="/news" className="nav-card">
+            <Link to="#" className="nav-card">
               <div className="nav-icon">
                 <Newspaper size={48} />
               </div>

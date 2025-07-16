@@ -30,25 +30,56 @@ const Header = () => {
           {" "}
           <ul className={isOpen ? "active" : ""}>
             <li>
-              <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} end>Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                end
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About Us</NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                About Us
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/solutions" className={({ isActive }) => isActive ? "active" : ""}>Our Solution</NavLink>
+              <NavLink
+                to="/solutions"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Our Solution
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/partners" className={({ isActive }) => isActive ? "active" : ""}>Partner With Us</NavLink>
+              <NavLink
+                to="/partners"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Partner With Us
+              </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/news" className={({ isActive }) => isActive ? "active" : ""}>News & Updates</NavLink>
+            </li> */}
+            <li>
+              <NavLink
+                to="/faq"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                FAQ
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""}>FAQ</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active cta-button" : "cta-button")}>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "active cta-button" : "cta-button"
+                }
+              >
                 Contact Us
               </NavLink>
             </li>

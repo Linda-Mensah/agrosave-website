@@ -1,7 +1,16 @@
 import PagesLayout from "../layouts/PagesLayout";
-import { Mail, Phone, MapPin, Send, User, MessageSquare, Building } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  User,
+  MessageSquare,
+  Building,
+} from "lucide-react";
 
-const PLANT_IMAGE = "https://plus.unsplash.com/premium_photo-1664301410539-873936f539ae?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const PLANT_IMAGE =
+  "https://plus.unsplash.com/premium_photo-1664301410539-873936f539ae?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 const Contact = () => {
   return (
@@ -10,30 +19,34 @@ const Contact = () => {
         className="page-header contact"
         style={{
           backgroundImage: `url(${PLANT_IMAGE})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          position: 'relative',
-          minHeight: '340px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          position: "relative",
+          minHeight: "340px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         {/* Green overlay */}
         <div
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: 0,
             left: 0,
-            width: '100%',
-            height: '100%',
+            width: "100%",
+            height: "100%",
             background:
-              'linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(27, 94, 32, 0.8) 100%)',
+              "linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(27, 94, 32, 0.8) 100%)",
             zIndex: 1,
           }}
         ></div>
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <h1 style={{ color: '#fff', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>Contact Us</h1>
+        <div className="container" style={{ position: "relative", zIndex: 2 }}>
+          <h1
+            style={{ color: "#fff", textShadow: "0 2px 4px rgba(0,0,0,0.3)" }}
+          >
+            Contact Us
+          </h1>
         </div>
       </section>
 
@@ -43,9 +56,11 @@ const Contact = () => {
             <div className="contact-info">
               <div className="info-header">
                 <h2>Get In Touch</h2>
-                <p>Ready to transform your agricultural business? Let's talk.</p>
+                <p>
+                  Ready to transform your agricultural business? Let's talk.
+                </p>
               </div>
-              
+
               <div className="contact-methods">
                 <div className="contact-method">
                   <div className="method-icon">
@@ -73,7 +88,7 @@ const Contact = () => {
                   </div>
                   <div className="method-content">
                     <h3>Email Us</h3>
-                    <p>agrosavegh@gmail.com</p>
+                    <p>contact@agrosavegh.com</p>
                   </div>
                 </div>
               </div>
@@ -85,18 +100,18 @@ const Contact = () => {
                   <h3>Send us a Message</h3>
                   <p>We'll get back to you within 24 hours</p>
                 </div>
-                
+
                 <form className="contact-form" id="contactForm">
                   <div className="form-group">
                     <div className="input-icon">
                       <User size={20} />
                     </div>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      name="name" 
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
                       placeholder="Your Full Name"
-                      required 
+                      required
                     />
                   </div>
 
@@ -104,12 +119,12 @@ const Contact = () => {
                     <div className="input-icon">
                       <Mail size={20} />
                     </div>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      name="email" 
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
                       placeholder="Your Email Address"
-                      required 
+                      required
                     />
                   </div>
 
@@ -117,10 +132,10 @@ const Contact = () => {
                     <div className="input-icon">
                       <Building size={20} />
                     </div>
-                    <input 
-                      type="text" 
-                      id="organization" 
-                      name="organization" 
+                    <input
+                      type="text"
+                      id="organization"
+                      name="organization"
                       placeholder="Organization (Optional)"
                     />
                   </div>
@@ -129,9 +144,9 @@ const Contact = () => {
                     <div className="input-icon">
                       <MessageSquare size={20} />
                     </div>
-                    <textarea 
-                      id="message" 
-                      name="message" 
+                    <textarea
+                      id="message"
+                      name="message"
                       placeholder="Tell us about your needs..."
                       rows="5"
                       required
