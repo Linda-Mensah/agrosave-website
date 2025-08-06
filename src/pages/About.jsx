@@ -134,9 +134,11 @@ const About = () => {
                 <Target className="card-icon" size={48} />
               </div>
               <h3>Our Mission</h3>
-              <p>
-                Reduce food waste and empower smallholder farmers with
-                sustainable cold storage solutions.
+              <p className="text-center">
+                To reduce food waste and empower smallholder farmers by
+                providing sustainable, off-grid cold storage and logistics
+                services, while supporting markets, restaurants and eateries
+                with reliable access to fresh, locally sourced produce.
               </p>
             </div>
             <div className="vision-card">
@@ -144,7 +146,7 @@ const About = () => {
                 <Globe className="card-icon" size={48} />
               </div>
               <h3>Our Vision</h3>
-              <p>
+              <p className="text-center">
                 A Ghana where fresh produce flows seamlessly from farm to fork,
                 without waste.
               </p>
@@ -154,7 +156,7 @@ const About = () => {
                 <Heart className="card-icon" size={48} />
               </div>
               <h3>Our Values</h3>
-              <p>
+              <p className="text-center">
                 Sustainability, innovation, community, and integrity guide
                 everything we do.
               </p>
