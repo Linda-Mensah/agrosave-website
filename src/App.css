@@ -892,18 +892,20 @@ section:nth-child(even) {
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 2rem;
-  align-items: flex-start;
+  /* align-items: center; */
+  justify-content: space-evenly;
+}
+
+.agro-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .agro-footer__brand h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #4ade80;
-}
-
-.agro-footer__brand p {
-  line-height: 1.4;
-  color: #ccc;
 }
 
 .agro-footer__links h4,

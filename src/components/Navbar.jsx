@@ -14,7 +14,13 @@ const Header = () => {
     <header className={isOpen ? "menu-open" : ""}>
       <div className="container">
         <div className="logo">
-          <NavLink to="/">Agrosave</NavLink>
+          <NavLink to="/">
+            <img
+              src="/images/agrosave-logo-transparent.png"
+              alt="Agrosave Logo"
+              className="w-35 h-15 object-cover"
+            />
+          </NavLink>
         </div>
 
         <div

@@ -12,7 +12,11 @@ const Footer = () => (
   <footer className="agro-footer">
     <div className="agro-footer__container">
       <div className="agro-footer__brand">
-        <p>Agrosave LOGO</p>
+        <img
+          src="/images/agrosave-logo-transparent.png"
+          alt="Agrosave Logo"
+          className="w-35 h-15 object-cover filter brightness-0 invert"
+        />
         <p>Powering the Future of Agriculture</p>
       </div>
 
