@@ -66,10 +66,11 @@ const Home = () => {
         ></div>
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="hero-content">
-            <h1>
-              <Leaf size={64} className="inline-icon" /> Powering the Future of
-              Agriculture with Cold Storage Innovation
-            </h1>
+            <div>
+              <Leaf size={64} className="inline-icon text-white" />
+              <h1 className="text-white text-2xl">AGROSAVE</h1>
+              <h4 className="tagline">Securing Harvest, Saving Tomorrow</h4>
+            </div>
             <Link to="/contact" className="cta-button">
               Contact Us
             </Link>
@@ -222,15 +223,15 @@ const Home = () => {
       {/* Impact Section */}
       <section className="impact">
         <div className="container">
-          <h2>Our Impact</h2>
+          <h2>Our Goals</h2>
           <div className="impact-stats">
             <div className="stat">
-              <h3>Reduced Food Waste</h3>
-              <p>Extending shelf life of perishables by 2–10+ days</p>
+              <h3>Reduce Food Waste</h3>
+              <p>Extend shelf life of perishables by 2–10+ days</p>
             </div>
             <div className="stat">
-              <h3>Improved Livelihoods</h3>
-              <p>Helping farmers earn better prices for their produce</p>
+              <h3>Improve Livelihoods</h3>
+              <p>Help farmers earn better prices for their produce</p>
             </div>
             <div className="stat">
               <h3>Sustainable Solution</h3>
@@ -238,15 +239,15 @@ const Home = () => {
             </div>
             <div className="stat">
               <h3>Community Growth</h3>
-              <p>Supporting 500+ farmers across multiple regions</p>
+              <p>Support farmers across multiple regions</p>
             </div>
             <div className="stat">
               <h3>Market Access</h3>
-              <p>Connecting rural farmers to urban markets</p>
+              <p>Connect rural farmers to urban markets</p>
             </div>
             <div className="stat">
               <h3>Technology Adoption</h3>
-              <p>Training 200+ farmers in modern storage techniques</p>
+              <p>Train 200+ farmers in modern storage techniques</p>
             </div>
           </div>
         </div>

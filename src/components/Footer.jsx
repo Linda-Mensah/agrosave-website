@@ -17,7 +17,10 @@ const Footer = () => (
           alt="Agrosave Logo"
           className="w-35 h-15 object-cover filter brightness-0 invert"
         />
-        <p>Powering the Future of Agriculture</p>
+        <p>
+          Securing Harvest <br />
+          Saving Tomorrow
+        </p>
       </div>
 
       <div className="agro-footer__links">

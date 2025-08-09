@@ -272,6 +272,12 @@ nav ul li a.active:after {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+.tagline {
+  margin: 20px 0;
+  color: white;
+  font-size: 40px;
+}
+
 /* Page Header - Enhanced */
 .page-header {
   min-height: 60vh;
@@ -892,14 +898,22 @@ section:nth-child(even) {
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 2rem;
-  /* align-items: center; */
+  align-items: start;
   justify-content: space-evenly;
 }
 
 .agro-footer__brand {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
+}
+
+.agro-footer__links,
+.agro-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .agro-footer__brand h3 {
@@ -922,7 +936,7 @@ section:nth-child(even) {
 }
 
 .agro-footer__links li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .agro-footer__links a {
@@ -939,12 +953,12 @@ section:nth-child(even) {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.6rem;
+  /* margin-bottom: 0.6rem; */
   color: #ccc;
 }
 
 .agro-footer__socials {
-  margin-top: 1.3rem;
+  margin-top: 0.5rem;
   display: flex;
   gap: 1rem;
 }
