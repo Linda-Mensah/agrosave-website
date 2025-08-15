@@ -273,7 +273,8 @@ nav ul li a.active:after {
 }
 
 .tagline {
-  margin: 15px 0;
+  /* margin-top: 10px; */
+  /* margin-bottom: 15px; */
   color: white;
   font-size: 30px;
 }
